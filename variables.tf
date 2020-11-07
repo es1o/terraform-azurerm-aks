@@ -1,3 +1,9 @@
+variable "auto_scaling" {
+  description = "(Optional) Enable cluster autoscaling"
+  type        = bool
+  default     = false
+}
+
 variable "resource_group_name" {
   description = "The resource group name to be imported"
   type        = string

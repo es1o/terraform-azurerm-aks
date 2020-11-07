@@ -29,6 +29,9 @@ resource "azurerm_kubernetes_cluster" "main" {
     vm_size         = var.agents_size
     os_disk_size_gb = var.os_disk_size_gb
     vnet_subnet_id  = var.vnet_subnet_id
+    enable_auto_scaling = var.auto_scaling
+    min_count       = 1
+    max_count       = 2
   }
 
   dynamic service_principal {
